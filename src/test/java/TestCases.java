@@ -12,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestCases {
 
-    private Main main;
+    private Main test;
 
     @BeforeEach
     public void setUp() {
         // Initialize your object here
-        main = new Main();
+        test = new Main();
     }
     @AfterEach
     public void separator(){
@@ -26,11 +26,11 @@ public class TestCases {
 
     @Test
     public void testCalculateWords1() {
-        main = new Main();
+        test = new Main();
         System.out.println("Test calculate unique words 1");
         String input = "hello world hello";
         System.out.println(input);
-        int result = main.calculateWords(input);
+        int result = test.calculateWords(input);
         System.out.println(result);
         assertEquals(2, result);
 
@@ -41,7 +41,7 @@ public class TestCases {
 
         String input = "hello world 32342 hell3o 231321";
         System.out.println(input);
-        int result = main.calculateWords(input);
+        int result = test.calculateWords(input);
         System.out.println(result);
         assertEquals(2, result);
 
@@ -52,7 +52,7 @@ public class TestCases {
         System.out.println("test reverse String");
         String input = "hello";
         System.out.println("input: "+ input);
-        String result = main.reverseString(input);
+        String result = test.reverseString(input);
         System.out.println("result: " + result);
         assertEquals("olleh", result);
     }
@@ -64,7 +64,7 @@ public class TestCases {
         list.add(2);
         list.add(3);
 
-        main.traverseArrayList(list);
+        test.traverseArrayList(list);
 
         assertEquals(3, list.size());
     }
@@ -73,7 +73,7 @@ public class TestCases {
     public void testDuplicateCharacters1() {
         System.out.println("Test Duplicate Characters 1");
         String input = "hello world hello";
-        Map<Character, Integer> result = main.findDuplicateCharacters(input);
+        Map<Character, Integer> result = test.findDuplicateCharacters(input);
         Map<Character, Integer> expected = new HashMap<>();
         expected.put('l', 5);
         assertEquals(expected.get('l'), result.get('l'));
@@ -84,7 +84,7 @@ public class TestCases {
         System.out.println("Test Duplicate Characters 2");
 
         String input = "hello world 32342 hell3o 231321";
-        Map<Character, Integer> result = main.findDuplicateCharacters(input);
+        Map<Character, Integer> result = test.findDuplicateCharacters(input);
         Map<Character, Integer> expected = new HashMap<>();
         expected.put('l', 5);
         assertEquals(expected.get('l'), result.get('l'));
@@ -96,7 +96,7 @@ public class TestCases {
         // Test the behavior of your readExcel method
         // For now, just ensure it doesn't throw exceptions
         // You might want to add more meaningful assertions depending on what the method does
-        main.readExcel();
+        test.readExcel();
         assertTrue(true);
     }
 }

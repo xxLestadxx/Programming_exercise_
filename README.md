@@ -1,7 +1,7 @@
 # How to run the program 
 
 ## Prerequisites
- - Java 17
+ - Java 18
  - maven 3.6
 
 ## Steps 
