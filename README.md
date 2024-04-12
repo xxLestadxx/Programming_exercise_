@@ -2,7 +2,7 @@
 
 ## Prerequisites
  - Java 18
- - maven 3.6
+ - maven 3.9.6
 
 ## Steps 
 
