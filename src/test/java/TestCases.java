@@ -26,6 +26,7 @@ public class TestCases {
 
     @Test
     public void testCalculateWords1() {
+        main = new Main();
         System.out.println("Test calculate unique words 1");
         String input = "hello world hello";
         System.out.println(input);
