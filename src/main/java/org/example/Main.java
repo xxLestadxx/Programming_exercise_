@@ -17,6 +17,7 @@ public class Main {
     }
 
     public String reverseString(String str){
+        str =str.trim();
         char[] charArray = str.toCharArray();
 
         int left = 0;
@@ -48,6 +49,8 @@ public class Main {
 
             //removing numbers as the task is to calculate only words
             word = word.replaceAll("\\d", "");
+            // making all words case-insensitive
+            word = word.toLowerCase();
 
             if(!word.isEmpty()){
                 if(wordFrequency.containsKey(word)){

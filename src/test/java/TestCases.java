@@ -48,7 +48,19 @@ public class TestCases {
     }
 
     @Test
-    public void testReverseString() {
+    public void testCalculateWords3() {
+        System.out.println("Test calculate unique words 3");
+
+        String input = "hello world Hello";
+        System.out.println(input);
+        int result = test.calculateWords(input);
+        System.out.println(result);
+        assertEquals(2, result);
+
+    }
+
+    @Test
+    public void testReverseString1() {
         System.out.println("test reverse String");
         String input = "hello";
         System.out.println("input: "+ input);
@@ -56,6 +68,17 @@ public class TestCases {
         System.out.println("result: " + result);
         assertEquals("olleh", result);
     }
+
+    @Test
+    public void testReverseString2() {
+        System.out.println("test reverse String");
+        String input = "   hello   ";
+        System.out.println("input: "+ input);
+        String result = test.reverseString(input);
+        System.out.println("result: " + result);
+        assertEquals("olleh", result);
+    }
+
 
     @Test
     public void testTraverseArrayList() {
